@@ -28,7 +28,7 @@ app.post("/signin", async (req, res) => {
     }
 
     res.send({
-      token: `${company.id}:${company.email}:${company.password}`,
+      token: `${company._id}:${company.email}:${company.password}`,
     });
   } catch (e) {
     res.status(500).send(e.message);
